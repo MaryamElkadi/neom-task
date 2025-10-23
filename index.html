@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus UI - Component Library</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/components.css">
+</head>
+<body>
+    <div class="library-container">
+        <header class="library-header">
+            <h1 class="library-title">Nexus UI</h1>
+            <p class="library-subtitle">A collection of reusable, customizable components for modern web applications</p>
+        </header>
+        
+        <div class="components-grid">
+            <nav class="sidebar">
+                <h2 class="sidebar-title">
+                    <i class="fas fa-th-large"></i>
+                    Components
+                </h2>
+                <a href="#button" class="nav-item active">
+                    <i class="fas fa-hand-pointer"></i>
+                    Button
+                </a>
+                <a href="#input" class="nav-item">
+                    <i class="fas fa-keyboard"></i>
+                    Input Field
+                </a>
+                <a href="#card" class="nav-item">
+                    <i class="fas fa-id-card"></i>
+                    Card
+                </a>
+                <a href="#modal" class="nav-item">
+                    <i class="fas fa-window-restore"></i>
+                    Modal
+                </a>
+                <a href="#alert" class="nav-item">
+                    <i class="fas fa-exclamation-circle"></i>
+                    Alert & Toast
+                </a>
+            </nav>
+            
+            <main class="components-main">
+                <!-- Button Component Section -->
+                <section id="button" class="component-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-hand-pointer"></i>
+                        Button
+                    </h2>
+                    <p>A versatile button component with multiple variants, sizes, and states.</p>
+                    
+                    <div class="demo-area">
+                        <div class="demo-card">
+                            <h3 class="demo-title">Variants</h3>
+                            <div class="component-showcase">
+                                <button class="nexus-btn nexus-btn-primary">Primary</button>
+                                <button class="nexus-btn nexus-btn-secondary">Secondary</button>
+                                <button class="nexus-btn nexus-btn-outline">Outline</button>
+                                <button class="nexus-btn nexus-btn-ghost">Ghost</button>
+                            </div>
+                        </div>
+                        
+                        <div class="demo-card">
+                            <h3 class="demo-title">Colors</h3>
+                            <div class="component-showcase">
+                                <button class="nexus-btn nexus-btn-primary">Primary</button>
+                                <button class="nexus-btn nexus-btn-success">Success</button>
+                                <button class="nexus-btn nexus-btn-warning">Warning</button>
+                                <button class="nexus-btn nexus-btn-error">Error</button>
+                            </div>
+                        </div>
+                        
+                        <div class="demo-card">
+                            <h3 class="demo-title">Sizes</h3>
+                            <div class="component-showcase">
+                                <button class="nexus-btn nexus-btn-primary nexus-btn-sm">Small</button>
+                                <button class="nexus-btn nexus-btn-primary">Medium</button>
+                                <button class="nexus-btn nexus-btn-primary nexus-btn-lg">Large</button>
+                            </div>
+                        </div>
+                        
+                        <div class="demo-card">
+                            <h3 class="demo-title">With Icons</h3>
+                            <div class="component-showcase">
+                                <button class="nexus-btn nexus-btn-primary">
+                                    <i class="fas fa-download"></i>
+                                    Download
+                                </button>
+                                <button class="nexus-btn nexus-btn-outline">
+                                    <i class="fas fa-cog"></i>
+                                    Settings
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Input Field Component Section -->
+                <section id="input" class="component-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-keyboard"></i>
+                        Input Field
+                    </h2>
+                    <p>A flexible input component with validation states, labels, and helper text.</p>
+                    
+                    <div class="demo-area">
+                        <div class="demo-card">
+                            <h3 class="demo-title">Basic Input</h3>
+                            <label class="input-label">Email Address</label>
+                            <input type="email" class="nexus-input" placeholder="you@example.com">
+                        </div>
+                        
+                        <div class="demo-card">
+                            <h3 class="demo-title">Required Field</h3>
+                            <label class="input-label input-required">Username</label>
+                            <input type="text" class="nexus-input" placeholder="Enter your username" required>
+                        </div>
+                        
+                        <div class="demo-card">
+                            <h3 class="demo-title">With Error State</h3>
+                            <label class="input-label">Password</label>
+                            <input type="password" class="nexus-input error" value="123">
+                            <div class="input-error">
+                                <i class="fas fa-exclamation-circle"></i>
+                                Password must be at least 8 characters
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Card Component Section -->
+                <section id="card" class="component-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-id-card"></i>
+                        Card
+                    </h2>
+                    <p>A container component for displaying related content in a structured layout.</p>
+                    
+                    <div class="demo-area">
+                        <div class="demo-card" style="grid-column: 1 / -1;">
+                            <h3 class="demo-title">Product Card</h3>
+                            <div class="nexus-card" style="max-width: 320px;">
+                                <div class="card-header">
+                                    <div style="width: 100%; height: 180px; background: linear-gradient(135deg, #3b82f6, #8b5cf6); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                                        Product Image
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title">Wireless Headphones</h3>
+                                    <p class="card-subtitle">Noise cancelling over-ear headphones with 30hr battery</p>
+                                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+                                        <span style="font-size: 1.25rem; font-weight: 600; color: var(--primary);">$199.99</span>
+                                        <button class="nexus-btn nexus-btn-primary nexus-btn-sm">
+                                            <i class="fas fa-shopping-cart"></i>
+                                            Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Modal Component Section -->
+                <section id="modal" class="component-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-window-restore"></i>
+                        Modal
+                    </h2>
+                    <p>A dialog overlay that requires user interaction.</p>
+                    
+                    <div class="demo-area">
+                        <div class="demo-card" style="grid-column: 1 / -1; text-align: center;">
+                            <h3 class="demo-title">Modal Demo</h3>
+                            <button id="openModalBtn" class="nexus-btn nexus-btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                                Open Modal
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Alert & Toast Component Section -->
+                <section id="alert" class="component-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-exclamation-circle"></i>
+                        Alert & Toast
+                    </h2>
+                    <p>Feedback components to notify users of important information.</p>
+                    
+                    <div class="demo-area">
+                        <div class="demo-card">
+                            <h3 class="demo-title">Alert Types</h3>
+                            <div class="nexus-alert nexus-alert-success">
+                                <i class="fas fa-check-circle alert-icon"></i>
+                                <div class="alert-content">
+                                    <div class="alert-title">Success!</div>
+                                    <div>Your changes have been saved successfully.</div>
+                                </div>
+                            </div>
+                            
+                            <div class="nexus-alert nexus-alert-error">
+                                <i class="fas fa-exclamation-circle alert-icon"></i>
+                                <div class="alert-content">
+                                    <div class="alert-title">Error</div>
+                                    <div>There was a problem with your request.</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="demo-card">
+                            <h3 class="demo-title">Toast Demo</h3>
+                            <div class="controls">
+                                <button id="successToast" class="nexus-btn nexus-btn-success nexus-btn-sm">Success</button>
+                                <button id="errorToast" class="nexus-btn nexus-btn-error nexus-btn-sm">Error</button>
+                                <button id="infoToast" class="nexus-btn nexus-btn-primary nexus-btn-sm">Info</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    
+    <!-- Modal Demo -->
+    <div class="nexus-modal" id="demoModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Confirm Action</h3>
+                <button class="modal-close" id="closeModalBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to proceed with this action? This cannot be undone.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="nexus-btn nexus-btn-outline" id="cancelModalBtn">Cancel</button>
+                <button class="nexus-btn nexus-btn-primary">Confirm</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+    
+    <script src="js/components.js"></script>
+</body>
+</html>

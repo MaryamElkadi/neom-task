@@ -1,0 +1,14 @@
+
+{
+  "name": "nexus-ui-library",
+  "version": "1.0.0",
+  "description": "A modern, reusable component library",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 3000",
+    "build": "echo 'No build process needed for static site'"
+  },
+  "keywords": ["components", "ui", "library", "css"],
+  "author": "Your Name",
+  "license": "MIT"
+}
